@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.page{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  perspective: 500px;
+  letter-spacing: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.skill-container::after{
+  content: "";
+    width: 31%;
+    height: 0;
+}
+
+.balloon1-left {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 15px 20px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #e0edff;
+  border-radius: 1rem;
+}
+
+.balloon1-left:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 15px solid #e0edff;
+}
+
+.work-item::before,
+.work-item::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+}
+
+.work-item::before {
+  bottom: -2px;
+  left: -5%;
+  width: 120%;
+  height: 1px; /* 上ボーダーの太さ */
+}
+
+.work-item::after {
+  top: -10%;
+  right: -2px;
+  width: 1px; /* 右ボーダーの太さ */
+  height: 120%;
+}
