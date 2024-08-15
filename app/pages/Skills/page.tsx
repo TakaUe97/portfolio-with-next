@@ -3,7 +3,7 @@ import Header from '@/app/components/Header';
 import React from 'react';
 import SkillItem from '@/app/components/SkillItem';
 
-const page = ({ delay = 0 }) => {
+const page = () => {
 
   return (
     <div>
