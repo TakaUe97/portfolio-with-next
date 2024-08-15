@@ -15,6 +15,14 @@
   text-align: center;
 }
 
+@media (max-width: 640px) {
+.site-title{
+  writing-mode: vertical-rl;
+  line-height: 5rem;
+  text-align: left;
+}
+}
+
 .skill-container::after{
   content: "";
     width: 31%;

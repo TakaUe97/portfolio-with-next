@@ -26,7 +26,7 @@ const Main = () => {
 
   return (
     <div>
-      <svg id="progress" viewBox="0 0 100 100" className='stroke-[15%] stroke-blue-900 fill-none -rotate-90 absolute h-[100vh] top-0 left-0 bottom-0 right-0 m-auto w-full'>
+      <svg id="progress" viewBox="0 0 100 100" className='stroke-[15%] stroke-blue-900 lg:-rotate-90 fill-none absolute h-[100vh] top-0 left-0 bottom-0 right-0 m-auto w-full'>
         <motion.circle
           cx="50"
           cy="50"
@@ -44,18 +44,21 @@ const Main = () => {
           cy="50"
           r="30"
           pathLength="1"
-          className="stroke-blue-900 opacity-40"
-          style={{ pathLength: scrollYProgress }}
+          className="stroke-blue-900 opacity-40 -rotate-90 lg:rotate-0"
+          style={{ pathLength: scrollYProgress,
+             transformOrigin: '50% 50%'
+           }}
         />
       </svg>
       <div ref={ref} className='h-[100vh] overflow-auto snap-y snap-mandatory m-auto'>
         <div className='page text-5xl lg:text-nowrap'>
           <motion.div
+          className='site-title'
           variants={siteTitle}
             initial={"initial"}
             animate={"animate"}
           >
-            <span>My Portfolio Site</span>
+            <span>My<br className='lg:hidden' /> Portfolio<br className='lg:hidden' /> Site</span>
           </motion.div>
           <motion.div
             className='absolute bottom-12 border-b-2 border-black text-lg tracking-wide'
