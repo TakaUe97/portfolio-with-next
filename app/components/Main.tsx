@@ -26,7 +26,7 @@ const Main = () => {
 
   return (
     <div>
-      <svg id="progress" viewBox="0 0 100 100" className='stroke-[15%] stroke-blue-900 fill-none -rotate-90 absolute h-[100vh] top-0 left-0 bottom-0 right-0 m-auto'>
+      <svg id="progress" viewBox="0 0 100 100" className='stroke-[15%] stroke-blue-900 fill-none -rotate-90 absolute h-[100vh] top-0 left-0 bottom-0 right-0 m-auto w-full'>
         <motion.circle
           cx="50"
           cy="50"
@@ -49,13 +49,13 @@ const Main = () => {
         />
       </svg>
       <div ref={ref} className='h-[100vh] overflow-auto snap-y snap-mandatory m-auto'>
-        <div className='page text-5xl text-nowrap'>
+        <div className='page text-5xl lg:text-nowrap'>
           <motion.div
           variants={siteTitle}
             initial={"initial"}
             animate={"animate"}
           >
-            <span> My Portfolio Site</span>
+            <span>My Portfolio Site</span>
           </motion.div>
           <motion.div
             className='absolute bottom-12 border-b-2 border-black text-lg tracking-wide'
